@@ -4,22 +4,25 @@
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
+
 <MudLayout>
     <MudAppBar Elevation="1">
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+        <MudIcon Icon="@Icons.Material.Filled.Cookie" Color="Color.Inherit" />
+        <MudText Typo="Typo.h5" Class="ml-3">Cookiegram</MudText>
+        <MudButton Href="" Match="NavLinkMatch.All" Variant="Variant.Text" Color="Color.Inherit" Class="ml-8">Home</MudButton>
+        <MudButton Href="popular" Match="NavLinkMatch.Prefix" Variant="Variant.Text" Color="Color.Inherit">Popular</MudButton>
         <MudSpacer />
+        <MudButton Href="post" Match="NavLinkMatch.Prefix" Variant="Variant.Text" Color="Color.Secondary" Class="mx-4">Post</MudButton>
+        <MudSpacer />
+        <MudButton Href="login" Match="NavLinkMatch.Prefix" Variant="Variant.Text" Color="Color.Inherit">Login</MudButton>
+        <MudButton Href="register" Match="NavLinkMatch.Prefix" Variant="Variant.Text" Color="Color.Inherit" Class="mr-4">Register</MudButton>
+        <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Inherit" Href="settings" />
         <MudIconButton Icon="@(DarkLightModeButtonIcon)" Color="Color.Inherit" OnClick="@DarkModeToggle" />
-        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
     </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
-        <NavMenu />
-    </MudDrawer>
     <MudMainContent Class="mt-16 pa-4">
         @Body
     </MudMainContent>
 </MudLayout>
-
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.
@@ -28,7 +31,6 @@
 </div>
 
 @code {
-    private bool _drawerOpen = true;
     private bool _isDarkMode = true;
     private MudTheme? _theme = null;
 
@@ -43,13 +45,6 @@
             LayoutProperties = new LayoutProperties()
         };
     }
-
-
-    private void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
-
     private void DarkModeToggle()
     {
         _isDarkMode = !_isDarkMode;
@@ -59,7 +54,7 @@
     {
         Black = "#110e2d",
         AppbarText = "#424242",
-        AppbarBackground = "rgba(255,255,255,0.8)",
+        AppbarBackground = "#ffffff",
         DrawerBackground = "#ffffff",
         GrayLight = "#e8e8e8",
         GrayLighter = "#f9f9f9",
@@ -72,7 +67,7 @@
         Background = "#1a1a27",
         BackgroundGray = "#151521",
         AppbarText = "#92929f",
-        AppbarBackground = "rgba(26,26,39,0.8)",
+        AppbarBackground = "#1a1a27",
         DrawerBackground = "#1a1a27",
         ActionDefault = "#74718e",
         ActionDisabled = "#9999994d",
@@ -100,5 +95,3 @@
         false => Icons.Material.Outlined.DarkMode,
     };
 }
-
-
