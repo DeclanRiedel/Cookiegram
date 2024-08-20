@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/home/declan/Devel/myrepos/cookiegram/cookiegram/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.cookiegram.props",
+      "PackagePath": "build\\cookiegram.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.cookiegram.props",
+      "PackagePath": "buildMultiTargeting\\cookiegram.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.cookiegram.props",
+      "PackagePath": "buildTransitive\\cookiegram.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.cookiegram.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
